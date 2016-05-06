@@ -1,0 +1,168 @@
+// 正文
+.typo {
+    overflow: hidden;
+    font-size: 105%;
+    line-height: 1.6;
+    word-wrap: break-word;
+
+
+    h1, h2, h3 {
+        margin: 1em 0;
+    }
+
+    h1 {
+        padding-bottom: 1em;
+        font-size: 150%;
+    }
+
+    h2 {
+        padding-bottom: 0.5em;
+        border-bottom: 1px dotted #999;
+        font-size: 140%;
+    }
+
+    h3 {
+        font-size: 130%;
+    }
+
+    h4 {
+        font-size: 120%;
+    }
+
+    h5 {
+        font-size: 110%;
+    }
+
+    h6 {
+        font-size: 100%;
+    }
+
+    h4, p, ul, ol, pre, blockquote, table {
+        margin: 2em 0;
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 2em;
+    }
+
+    a {
+        border-bottom: 1px dashed #aaa;
+
+        &:hover {
+            border-bottom-color: #000;
+        }
+    }
+
+    h1:first-child,
+    h2:first-child,
+    h3:first-child,
+    h4:first-child,
+    p:first-child,
+    ul:first-child,
+    ol:first-child,
+    pre:first-child,
+    blockquote:first-child,
+    table:first-child {
+        margin-top: 0;
+    }
+
+    ul, ol {
+        padding-left: 1em;
+    }
+
+    ul p:first-child ,ol p:first-child {
+        margin: 0;
+    }
+
+    ul ul, ul ol, ol ul, ol ol {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    ul {
+        li {
+            list-style: inside disc;
+        }
+    }
+
+    img,video,audio {
+        max-width: 100%;
+        position: static !important;
+    }
+
+    blockquote {
+        color: #555;
+        background: #fefefe;
+        padding-left: 1em;
+        margin-left: 0.5em;
+        font-size: 1em;
+        border-left: 3px solid #ccc;
+
+        & p:first-child {
+            margin-top: 0;
+        }
+
+        & p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+
+    pre, code {
+        border-radius: @border-radius-small;
+        font-size: 0.9em;
+        padding: 0.1em 0.3em;
+        background-color: #eee;
+        font-family: Courier, monospace;
+    }
+
+    pre {
+        position: relative;
+        padding: 1em;
+        margin-bottom: 2.5em;
+        border: none;
+        overflow: auto;
+        line-height: 1.3;
+        max-height: 500px;
+
+        & code {
+            background-color: transparent;
+            font-size: 1em;
+            overflow-wrap: normal;
+            white-space: inherit;
+        }
+    }
+
+
+    hr {
+        margin: 1em auto;
+        border-top: 1px dotted #eee;
+    }
+
+    kbd {
+        padding: 4px 4px 3px;
+        background: #eee;
+        color: #555;
+    }
+
+
+    table {
+        width: 100%;
+
+        & th, & td {
+            border: 1px solid #E6E6E6;
+            padding: 5px 8px;
+            word-break: normal;
+        }
+
+        & th {
+            background: #F3F3F3;
+        }
+    }
+
+
+
+
+}

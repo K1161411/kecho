@@ -1,0 +1,291 @@
+// 全局变量
+@screen-sm-min: 700px;
+@border-radius-base: 5px;
+@border-radius-small: 3px;
+@brand-primary: #333;
+
+
+// 引用normalize.css
+@import "../lib/normalize.css/normalize.less";
+
+// 引用minxins/sprite
+@import "./include/sprite.less";
+
+// 文本样式
+@import "./include/typo.less";
+
+
+
+// 基础样式
+body {
+    font-size: 100%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    // font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, STHeiti, "Microsoft Yahei", sans-serif;
+    background: #fff;
+
+    @media (min-width: @screen-sm-min) {
+        background: #F4F6F7;
+    }
+}
+
+.container {
+    width: 94%;
+    padding: 0 3%;
+
+    @media (min-width: @screen-sm-min) {
+        width: 680px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+}
+
+.clearfix {
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none inside;
+    }
+}
+
+
+a {
+    color: @brand-primary;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        color: darken(@brand-primary, 50%);
+        transition: all .3s;
+    }
+}
+
+
+// 头部
+.full-header {
+    height: 80px;
+
+    .container {
+        width: auto;
+        padding: 0;
+    }
+
+    .logo {
+        position: absolute;
+        font-size: 120%;
+        top: 20px;
+        left: 4%;
+
+        @media (min-width: @screen-sm-min) {
+        left: 20px;
+        }
+
+        a {
+            .spriteMain;
+            width: 53px;
+            height: 38px;
+            text-indent: -9999em;
+
+            @media (min-width: @screen-sm-min) {
+                opacity: 0.2;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .nav {
+        position: absolute;
+        top: 25px;
+        right: 4%;
+
+        @media (min-width: @screen-sm-min) {
+            right: 20px;
+        }
+
+        ul {
+            li {
+                display: inline;
+                padding: 0 10px;
+
+                a {
+                    font-size: 90%;
+                    color: #111;
+
+                    @media (min-width: @screen-sm-min) {
+                        opacity: 0.3;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+// 页脚
+.full-footer {
+    position: relative;
+    height: 100px;
+    margin-top: 20px;
+
+    .copyright {
+        line-height: 80px;
+        text-align: center;
+        font-size: 70%;
+        color: #ccc;
+
+        a {
+            color: #ccc;
+
+            &:hover {
+                color: #999;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// 主内容
+.full-container {
+    h1.title, h2.title {
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 0;
+        font-size: 170%;
+        line-height: 1.4;
+
+        a {
+            color: #000;
+
+            &:hover {
+                color: @brand-primary;
+            }
+        }
+    }
+
+    .date {
+        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        font-size: 90%;
+        font-weight: normal;
+        color: #ccc;
+        margin-bottom: 2.5em;
+    }
+
+    .content {
+        background: #fff;
+        border-bottom: 1px solid #EAEFEF;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+
+        @media (min-width: @screen-sm-min) {
+            padding: 40px;
+            border-radius: @border-radius-base;
+            background: #fff;
+            border: 1px solid #EAEFEF;
+        }
+    }
+}
+
+
+
+
+
+// 列表页（暂时只有首页调用）
+.body-list {
+    .full-container {
+        .content {
+            padding: 0;
+
+            @media (min-width: @screen-sm-min) {
+                padding: 15px 40px;
+            }
+
+            .list {
+
+                h3.year {
+                    margin: 5em 0 0 0;
+                    font-size: 120%;
+                    font-weight: normal;
+                    color: #333;
+                    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+                    border-bottom: 1px solid #eee;
+                    padding: 0 0 0.5em 0;
+
+                    &:first-child {
+                        margin-top: 1.5em;
+                    }
+                }
+
+                .item {
+                    a {
+                        display: block;
+                        padding: 10px 0;
+                        border-bottom: 1px solid #eee;
+
+                        h2.title {
+                            font-size: 115%;
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        span.date {
+                            font-size: 70%;
+                            padding: 0;
+                            margin: 0;
+                        }
+
+                    }
+
+                    &:first-child a {
+                        border-top: 1px solid #eee;
+
+                        @media (min-width: @screen-sm-min) {
+                            border-top: none 0;
+                        }
+                    }
+
+
+                    &:last-child a {
+                        border-bottom: 0 none;
+                    }
+
+
+
+                }
+            }
+        }
+    }
+}
