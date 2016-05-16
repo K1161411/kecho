@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>README - solarhell</title>
+    <meta name="description" content="solarhell">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../../../themes/ryu/assets/css/app.css">
+    <script src="../../../themes/ryu/assets/js/app.js"></script>
+    <link rel="apple-touch-icon-precomposed" href="../../../themes/ryu/assets/img/favicon/favicon_144.png" size="144x144">
+    <link rel="shortcut icon" href="../../../themes/ryu/assets/img/favicon/favicon.ico">
+</head>
+<body class="body body-article">
+
+    <div class="full-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html" title="solarhell" alt="solarhell">首页</a>
+            </div>
+
+            <div class="nav">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="full-container">
+        <div class="container">
+            <div class="content">
+                <h1 class="title">README</h1>
+                <h3 class="date">20160413</h3>
+                <div class="clearfix typo">
+                    <h2>kecho</h2><p>一个简单的 markdown 静态博客</p><h2>输入</h2><p>博客保存格式為 <code>.md</code>，并放到 <code>_markdown</code> 目录下（按年月存放，如 <code>_markdown/2015/05/halo.md</code> ）。</p><p>说明：</p><pre><code>&lt;!-- date: ____DATE____ --&gt;
+____TITLE____
+========
+
+____CONTENT____</code></pre><p>范例：</p><pre><code>&lt;!-- date: 20160413 --&gt;
+这是我的第一个博客
+========
+
+这里是博客内容，记得博客内容与大标题之前留空一行。</code></pre><p>PS： <code>博客附件（如图片等静态文件）</code> 存放的路径我个人用 <code>_attachment</code>，其实放到 <code>kecho</code> 目录下任何地方都行，只要能被访问到。</p><h2>输出</h2><p>假设 <code>.md</code> 文件位于 <code>_markdown/2016/04/halo.md</code>。<br>输出的 <code>.html</code> 文件则位于 <code>article/2016/04/halo.html</code>，以及附带输出在根目录的 <code>index.html</code>。</p><p>PS： <code>_markdown</code>, <code>article</code> 目录名字均可配置，具体请参考配置章节。</p><h2>用法</h2><p>终端下运行 <code>php make.php</code></p><h2>配置</h2><p>请查看 <code>config.php</code> 里的注释</p><p>其他：<br>如果需要 <code>gulp</code> 编译环境，记得先 <code>npm install -g gulp</code> 安裝。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="full-footer">
+        <div class="container">
+            <div class="copyright">
+                © 2016&nbsp;
+                <a href="https://github.com/rangebug/kecho" target="_blank">kecho</a>
+            </div>
+
+            <div class="Google Analytics">
+                
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

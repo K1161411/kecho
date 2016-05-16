@@ -1,14 +1,14 @@
 // gulp 安裝命令
 // @lastdate 2016-04-13 12:31:03
 //
-// npm install gulp autoprefixer strftime gulp-less gulp-autoprefixer gulp-concat gulp-jade gulp-jshint gulp-uglify gulp-jshint gulp-coffee gulp-header gulp-rename gulp-sourcemaps gulp-minify-css gulp-imports gulp-livereload gulp-imports gulp-watch --save-dev
+// npm install gulp autoprefixer strftime gulp-less gulp-autoprefixer gulp-concat gulp-jade gulp-jshint gulp-uglify gulp-jshint gulp-coffee gulp-header gulp-rename gulp-sourcemaps gulp-clean-css gulp-imports gulp-livereload gulp-imports gulp-watch --save-dev
 //
 //
 // 初始化gulp插件
 // --------------------------------------------
 var gulp = require('gulp');
 var less = require('gulp-less');
-var minifyCss = require('gulp-minify-css');
+var cleanCss = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var prefix = require('gulp-autoprefixer');
 // var concat = require('gulp-concat');
@@ -71,7 +71,7 @@ gulp.task('theme_style_module', function() {
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('themes/ryu/assets/css/'))
-        // .pipe(minifyCss())
+        // .pipe(cleanCss())
         // .pipe(rename({
         //     suffix: '.min'
         // }))
